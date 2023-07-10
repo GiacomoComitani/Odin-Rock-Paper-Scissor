@@ -1,8 +1,9 @@
 .container {
-    background-color: aqua;
+    background-color: #00455e;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 div {
@@ -56,6 +57,7 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #ffae00;
 }
 
 .container .game .cards .card .image {
