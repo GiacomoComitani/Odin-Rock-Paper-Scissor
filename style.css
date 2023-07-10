@@ -40,17 +40,13 @@ div {
 }
 
 .container .game .cards {
-    flex: 4;
-}
-
-.container .game .cards {
     display: flex;
     gap: 20px;
 }
 
-.container .game .cards .card {
-    display: flex;
-    flex-direction: column;
+.container .game .cards .card .image {
+    display: block;
+    height: auto;
 }
 
 .container .game .cards .card .text {
@@ -63,13 +59,6 @@ div {
 .container .game .cards .card .image {
     flex: 4;
 }
-
-
-
-
-
-
-
 
 .container .copyright {
     display: flex;
