@@ -92,6 +92,8 @@ function updateComment(player,computer){
         comm.textContent = 'Rock beats scissor!'
     }else if ((player === 'scissor' && computer === 'paper')||(player === 'paper' && computer === 'scissor')){
         comm.textContent = 'Scissor beats paper!'
+    }else if ((player === 'scissor' && computer === rock) || computer === 'scissor' && player === 'rock'){
+        comm.textContent = 'Rock beats scissor'
     }
 }
 
