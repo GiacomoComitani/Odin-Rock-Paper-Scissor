@@ -4,13 +4,20 @@ cardsContainer.addEventListener('click', handleClick);
 
 let playerScore = 0;
 let computerScore = 0;
+let history = [];
 
 function handleClick(event) {
+    if (playerScore === 5 || computerScore === 5 ) {
+        return;
+    }
+
   const clickedElement = event.target;
   if (clickedElement.tagName === 'IMG') {
     const card = clickedElement.closest('.card');
     const player = card.dataset.value;
     const computer = generateComputer();
+
+    history.push({player,computer});
 
     if (player === computer) {
       // pareggio
@@ -25,7 +32,6 @@ function handleClick(event) {
       // player win
       playerScore++;
     }
-
     updateScore();
     updateMoves(player,computer);
   }
@@ -33,7 +39,13 @@ function handleClick(event) {
 
 function updateMoves(player,computer) {
   const moves = document.querySelector('.moves');
-  moves.textContent = `Player: ${player} - Computer: ${computer}`;
+  let movesText ;
+
+  for (let i = 0; i < history.lenght; i++) {
+    const move = history[i];
+    movesText += `Player: ${move.player} - Computer: ${move.computer}\n`;
+  }
+  moves.textContent = movesText;
 }
 
 function updateScore() {
