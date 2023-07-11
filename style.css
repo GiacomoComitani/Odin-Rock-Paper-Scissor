@@ -1,13 +1,8 @@
 .container {
     background-color: #00455e;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     color: white;
-}
-
-div {
-    border: solid 1px;
 }
 
 .container .main-title {
@@ -19,7 +14,7 @@ div {
 
 
 .container .main-title p {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -40,13 +35,13 @@ div {
     justify-content: center;
     align-content: center;
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container .game .moves {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,5 +85,5 @@ div {
 
 .container .game .comment {
     padding: 10px;
-    font-size: 20pxpx;
+    font-size: 20px;
 }
