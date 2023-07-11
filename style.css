@@ -9,11 +9,14 @@
 div {
     border: solid 1px;
 }
+
 .container .main-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
 }
+
 
 .container .main-title p {
     font-size: 30px;
@@ -45,6 +48,8 @@ div {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .container .game .cards {
