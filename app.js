@@ -9,7 +9,6 @@ const history = [];
 function handleClick(event) {
 
     if (playerScore === 5 || computerScore === 5 ) {
-        endComment(playerScore, computerScore);
         return;
     }
 
@@ -33,10 +32,16 @@ function handleClick(event) {
     } else {
       // player win
       playerScore++;
+      
     }
     updateComment(player, computer);
     updateScore();
     updateMoves(history);
+
+    if (playerScore === 5 || computerScore === 5 ) {
+        endComment();
+        return;
+    }
   }
 }
 

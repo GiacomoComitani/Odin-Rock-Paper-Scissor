@@ -26,7 +26,7 @@
     flex: 1;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 .container .game .score {
