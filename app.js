@@ -23,9 +23,9 @@ function handleClick(event) {
     if (player === computer) {
       // pareggio
     } else if (
-      (player === 'sasso' && computer === 'carta') ||
-      (player === 'carta' && computer === 'forbice') ||
-      (player === 'forbice' && computer === 'sasso')
+      (player === 'rock' && computer === 'paper') ||
+      (player === 'scissor' && computer === 'scissor') ||
+      (player === 'scissor' && computer === 'rock')
     ) {
       // computer win
       computerScore++;
@@ -65,7 +65,7 @@ function updateScore() {
 }
 
 function generateComputer() {
-  const choices = ['sasso', 'carta', 'forbice'];
+  const choices = ['rock', 'paper', 'scissor'];
   const index = Math.floor(Math.random() * choices.length);
   return choices[index];
 }
@@ -84,14 +84,14 @@ function updateComment(player,computer){
 
     const comm = document.querySelector('.comment p')
 
-    if ((player === 'sasso' && computer === 'carta')||(computer === 'carta' && player === 'sasso')) {
+    if ((player === 'rock' && computer === 'paper')||(computer === 'paper' && player === 'rock')) {
         comm.textContent = 'Paper beats Rock!'
-    }else if ((player === 'sasso' && computer === 'sasso') || (player === 'carta' && computer === 'carta')||(player === 'forbice' && computer === 'forbice')){
+    }else if ((player === 'rock' && computer === 'rock') || (player === 'paper' && computer === 'paper')||(player === 'scissor' && computer === 'scissor')){
         comm.textContent = 'It\'s a tie!'
-    }else if (player === 'sasso' && computer === 'forbice'){
-        comm.textContent = 'Rock beats Scissors!'
+    }else if (player === 'rock' && computer === 'scissor'){
+        comm.textContent = 'Rock beats scissor!'
     }else if ((player === 'scissor' && computer === 'paper')||(player === 'paper' && computer === 'scissor')){
-        comm.textContent = 'Scissors beats paper!'
+        comm.textContent = 'Scissor beats paper!'
     }
 }
 
