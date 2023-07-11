@@ -33,10 +33,12 @@ div {
 
 .container .game .score {
     margin-top: 10px;
+    flex: 1;
 }
 
 .container .game .moves {
     margin-bottom: 10px;
+    flex: 1;
 }
 
 .container .game .cards {
