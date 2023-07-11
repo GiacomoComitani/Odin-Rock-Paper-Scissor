@@ -26,7 +26,16 @@ function handleClick(event) {
   }
 
   updateScore();
+  updateMoves();
 }
+
+  function updateMoves(){
+    const moves = document.querySelector('.moves');
+    moves.textContent = 'Player: ${player} - Computer: ${computer}';
+  }
+
+
+
 
 function updateScore(){
     const scoreElement = document.querySelector('.score');
