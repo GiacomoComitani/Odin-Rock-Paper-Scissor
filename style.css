@@ -104,3 +104,15 @@
 .image:active img {
     transform: translateY(20px);
 }
+
+.container #button {
+    background-color: black;
+    margin-left: 60%;
+    margin-right: 20%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container #button p {
+    color: white;
+}

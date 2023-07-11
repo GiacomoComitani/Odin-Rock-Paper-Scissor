@@ -40,6 +40,8 @@ function handleClick(event) {
 
     if (playerScore === 5 || computerScore === 5 ) {
         endComment(playerScore,computerScore);
+        const button = document.getElementById('button');
+        button.style.display = 'block';
         return;
     }
   }
@@ -92,3 +94,7 @@ function updateComment(player,computer){
         comm.textContent = 'Scissors beats paper!'
     }
 }
+
+button.addEventListener('click', function() {
+    location.reload();
+  });
