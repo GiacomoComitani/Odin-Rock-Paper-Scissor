@@ -9,6 +9,7 @@ const history = [];
 function handleClick(event) {
 
     if (playerScore === 5 || computerScore === 5 ) {
+        endComment(playerScore, computerScore);
         return;
     }
 
@@ -33,6 +34,7 @@ function handleClick(event) {
       // player win
       playerScore++;
     }
+    updateComment(player, computer);
     updateScore();
     updateMoves(history);
   }
@@ -59,4 +61,29 @@ function generateComputer() {
   const choices = ['sasso', 'carta', 'forbice'];
   const index = Math.floor(Math.random() * choices.length);
   return choices[index];
+}
+
+function endComment(playerScore, computerScore){
+    const comm = document.querySelector('.comment p')
+
+    if (playerScore > computerScore) {
+        comm.textContent = 'Congratulations! you won!'
+    }else{
+        comm.textContent = 'You lost the game! :('
+    }
+}
+
+function updateComment(player,computer){
+
+    const comm = document.querySelector('.comment p')
+
+    if ((player === 'sasso' && computer === 'carta')||(computer === 'carta' && player === 'sasso')) {
+        comm.textContent = 'Paper beats Rock!'
+    }else if ((player === 'sasso' && computer === 'sasso') || (player === 'carta' && computer === 'carta')||(player === 'forbice' && computer === 'forbice')){
+        comm.textContent = 'It\'s a tie!'
+    }else if (player === 'sasso' && computer === 'forbice'){
+        comm.textContent = 'Rock beats Scissors!'
+    }else if ((player === 'scissor' && computer === 'paper')||(player === 'paper' && computer === 'scissor')){
+        comm.textContent = 'Scissors beats paper!'
+    }
 }
