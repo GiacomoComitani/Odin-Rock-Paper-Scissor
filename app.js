@@ -29,10 +29,10 @@ function handleClick(event) {
   updateMoves();
 }
 
-  function updateMoves(){
+function updateMoves(){
     const moves = document.querySelector('.moves');
     moves.textContent = 'Player: ${player} - Computer: ${computer}';
-  }
+}
 
 
 

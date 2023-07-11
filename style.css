@@ -28,17 +28,23 @@ div {
     flex: 1;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 70px;
 }
 
 .container .game .score {
     margin-top: 10px;
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
 }
 
 .container .game .moves {
     margin-bottom: 10px;
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .container .game .cards {
