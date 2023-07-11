@@ -27,3 +27,8 @@ function handleClick(event) {
 
   updateScore();
 }
+
+function updateScore(){
+    const scoreElement = document.querySelector('.score');
+    scoreElement.textContent = 'Player: ${playerScore} - Computer: ${computerScore}';
+}
