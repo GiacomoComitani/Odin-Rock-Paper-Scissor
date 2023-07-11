@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
-    <script src="app.js"></script>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -17,15 +16,15 @@
                 <p>Player: 0 - Computer: 0</p>
             </div>
             <div class="cards">
-                <div class="card">
+                <div class="card" data-value="sasso">
                     <div class="image">
-                        <img src="images/rock.png" alt="a beautiful image of a rock" height="200px" width="200px">
+                      <img src="images/rock.png" alt="a beautiful image of a rock" height="200px" width="200px">
                     </div>
                     <div class="text">
-                        <P>Rock</P>
+                      <p>Rock</p>
                     </div>
-                </div>
-                <div class="card">
+                  </div>
+                <div class="card" data-value="carta">
                     <div class="image">
                         <img src="images/paper.png" alt="a beautiful image of a paper" height="200px" width="200px">
                     </div>
@@ -33,7 +32,7 @@
                         <p>Paper</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-value="forbice">
                     <div class="image">
                         <img src="images/scissors.png" alt="a beautiful image of some scissors" height="200px" width="200px">
                     </div>
@@ -48,6 +47,6 @@
             <p>Copyright © The Odin Project</p>
         </div>
     </div>
-    
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,46 +1,48 @@
-const cards = document.querySelectorAll('.card')
+const cardsContainer = document.querySelector('.cards');
 
-for (let i = 0; i < cards.length; i++ ){
-    cards[i].addEventListener('click', handleClick);
-}
+cardsContainer.addEventListener('click', handleClick);
 
 let playerScore = 0;
 let computerScore = 0;
 
 function handleClick(event) {
-  const player = event.target.querySelector('p').textContent;
-  const computer = generateComputer();
+  const clickedElement = event.target;
+  if (clickedElement.tagName === 'IMG') {
+    const card = clickedElement.closest('.card');
+    const player = card.dataset.value;
+    const computer = generateComputer();
 
-  if (player === computer) {
-    // pareggio 
-  }else if (
-    (player === 'sasso' && computer === 'carta') ||
-    (player === 'carta' && computer === 'forbice')||
-    (player === 'forbice' && computer === 'sasso')
-  ){
-    //computer win
-    computerScore++;
-  }else{
-    // player win
-    playerScore++;
+    if (player === computer) {
+      // pareggio
+    } else if (
+      (player === 'sasso' && computer === 'carta') ||
+      (player === 'carta' && computer === 'forbice') ||
+      (player === 'forbice' && computer === 'sasso')
+    ) {
+      // computer win
+      computerScore++;
+    } else {
+      // player win
+      playerScore++;
+    }
+
+    updateScore();
+    updateMoves(player,computer);
   }
-
-  updateScore();
-  updateMoves();
 }
 
-function updateMoves(){
-    const moves = document.querySelector('.moves');
-    moves.textContent = `Player: ${player} - Computer: ${computer}`;
+function updateMoves(player,computer) {
+  const moves = document.querySelector('.moves');
+  moves.textContent = `Player: ${player} - Computer: ${computer}`;
 }
 
-function updateScore(){
-    const scoreElement = document.querySelector('.score');
-    scoreElement.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
+function updateScore() {
+  const scoreElement = document.querySelector('.score');
+  scoreElement.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
 }
 
-function generateComputer(){
-    const choices = ['sasso', 'carta', 'forbice'];
-    const index = Math.floor(Math.random()* choices.lenght);
-    return choices[index];
+function generateComputer() {
+  const choices = ['sasso', 'carta', 'forbice'];
+  const index = Math.floor(Math.random() * choices.length);
+  return choices[index];
 }
