@@ -24,7 +24,7 @@ function handleClick(event) {
       // pareggio
     } else if (
       (player === 'rock' && computer === 'paper') ||
-      (player === 'scissor' && computer === 'scissor') ||
+      (player === 'paper' && computer === 'scissor') ||
       (player === 'scissor' && computer === 'rock')
     ) {
       // computer win
@@ -74,9 +74,9 @@ function endComment(playerScore, computerScore){
     const comm = document.querySelector('.comment p')
 
     if (playerScore > computerScore) {
-        comm.textContent = 'Congratulations! you won!'
+        comm.textContent = 'Congratulations! you won!';
     }else{
-        comm.textContent = 'You lost the game! :('
+        comm.textContent = 'You lost the game! :(';
     }
 }
 
@@ -84,7 +84,7 @@ function updateComment(player,computer){
 
     const comm = document.querySelector('.comment p')
 
-    if ((player === 'rock' && computer === 'paper')||(computer === 'paper' && player === 'rock')) {
+    if ((player === 'rock' && computer === 'paper')||(computer === 'rock' && player === 'paper')) {
         comm.textContent = 'Paper beats Rock!'
     }else if ((player === 'rock' && computer === 'rock') || (player === 'paper' && computer === 'paper')||(player === 'scissor' && computer === 'scissor')){
         comm.textContent = 'It\'s a tie!'
@@ -92,8 +92,8 @@ function updateComment(player,computer){
         comm.textContent = 'Rock beats scissor!'
     }else if ((player === 'scissor' && computer === 'paper')||(player === 'paper' && computer === 'scissor')){
         comm.textContent = 'Scissor beats paper!'
-    }else if ((player === 'scissor' && computer === rock) || computer === 'scissor' && player === 'rock'){
-        comm.textContent = 'Rock beats scissor'
+    }else if ((player === 'scissor' && computer === 'rock') || computer === 'scissor' && player === 'rock'){
+        comm.textContent = 'Rock beats scissor';
     }
 }
 
