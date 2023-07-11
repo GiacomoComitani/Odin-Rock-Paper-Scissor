@@ -116,3 +116,7 @@
 .container #button p {
     color: white;
 }
+
+.game .moves pre {
+    font-size: 15px;
+}
