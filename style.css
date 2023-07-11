@@ -3,14 +3,12 @@
     display: flex;
     flex-direction: column;
     color: white;
-    min-height: 100%;
 }
 
 .container .main-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 auto;
 }
 
 
@@ -24,10 +22,8 @@
 .container .game {
     display: flex;
     flex-direction: column;
-    flex: 1;
     align-items: center;
     justify-content: center;
-    gap: 30px;
 }
 
 .container .game .score {
@@ -56,10 +52,6 @@
     gap: 20px;
 }
 
-.container .game .cards .card .image {
-    display: block;
-    height: auto;
-}
 
 .container .game .cards .card .text {
     display: flex;
@@ -68,11 +60,6 @@
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.container .game .cards .card .image {
-    flex: 4;
-}
-
 .container .copyright {
     display: flex;
     align-items: center;
@@ -92,6 +79,7 @@
 .container .cards .card .image {
     position: relative;
     display: inline-block;
+    flex: 4;
 }
 
 .container .cards .card .image img {
