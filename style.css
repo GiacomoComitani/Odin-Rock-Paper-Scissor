@@ -87,3 +87,8 @@ div {
 .container .copyright p {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container .game .comment {
+    padding: 10px;
+    font-size: 20pxpx;
+}
