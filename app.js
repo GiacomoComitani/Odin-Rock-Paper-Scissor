@@ -4,9 +4,10 @@ cardsContainer.addEventListener('click', handleClick);
 
 let playerScore = 0;
 let computerScore = 0;
-let history = [];
+const history = [];
 
 function handleClick(event) {
+
     if (playerScore === 5 || computerScore === 5 ) {
         return;
     }
@@ -33,20 +34,21 @@ function handleClick(event) {
       playerScore++;
     }
     updateScore();
-    updateMoves(player,computer);
+    updateMoves(history);
   }
 }
 
-function updateMoves(player,computer) {
-  const moves = document.querySelector('.moves');
-  let movesText ;
+function updateMoves(history) {
+  const moves = document.querySelector('.moves pre');
+  let movesText = '';
 
-  for (let i = 0; i < history.lenght; i++) {
+  for (let i = 0; i < history.length; i++) {
     const move = history[i];
     movesText += `Player: ${move.player} - Computer: ${move.computer}\n`;
   }
   moves.textContent = movesText;
 }
+
 
 function updateScore() {
   const scoreElement = document.querySelector('.score');
