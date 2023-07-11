@@ -87,3 +87,20 @@
     padding: 10px;
     font-size: 20px;
 }
+
+.container .cards .card .image {
+    position: relative;
+    display: inline-block;
+}
+
+.container .cards .card .image img {
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: translate(5px, 5px);
+}
+
+.image:active img {
+    transform: translateY(20px);
+}

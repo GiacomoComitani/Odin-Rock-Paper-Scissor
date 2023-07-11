@@ -39,7 +39,7 @@ function handleClick(event) {
     updateMoves(history);
 
     if (playerScore === 5 || computerScore === 5 ) {
-        endComment();
+        endComment(playerScore,computerScore);
         return;
     }
   }
